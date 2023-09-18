@@ -44,27 +44,27 @@ jobs:
           $content = Get-Content $path -Raw
           $content = $content.Replace(
           'SendPreLoginHandshake(
-            instanceName,
-            encrypt,
-            integratedSecurity,
-            !string.IsNullOrEmpty(certificate),
-            useOriginalAddressInfo,
-            serverCertificateFilename,
-            serverCallback,
-            clientCallback);',
+                instanceName,
+                encrypt,
+                integratedSecurity,
+                !string.IsNullOrEmpty(certificate),
+                useOriginalAddressInfo,
+                serverCertificateFilename,
+                serverCallback,
+                clientCallback);',
           '// SendPreLoginHandshake(instanceName, encrypt, integratedSecurity, !string.IsNullOrEmpty(certificate), useOriginalAddressInfo, serverCertificateFilename, serverCallback, clientCallback);'
           ).Replace(
           'PreLoginHandshakeStatus status = ConsumePreLoginHandshake(
-            authType,
-            encrypt,
-            trustServerCert,
-            integratedSecurity,
-            serverCallback,
-            clientCallback,
-            out marsCapable,
-            out _connHandler._fedAuthRequired,
-            isTlsFirst,
-            serverCertificateFilename);',
+                authType,
+                encrypt,
+                trustServerCert,
+                integratedSecurity,
+                serverCallback,
+                clientCallback,
+                out marsCapable,
+                out _connHandler._fedAuthRequired,
+                isTlsFirst,
+                serverCertificateFilename);',
           'PreLoginHandshakeStatus status = PreLoginHandshakeStatus.Successful;'
           ).Replace(
           'out marsCapable,
