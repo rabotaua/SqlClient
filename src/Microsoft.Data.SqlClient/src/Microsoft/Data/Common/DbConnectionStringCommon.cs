@@ -1054,7 +1054,7 @@ namespace Microsoft.Data.Common
         // SqlClient
         internal const string TransparentNetworkIPResolution = "Transparent Network IP Resolution";
         internal const string Certificate = "Certificate";
-#endif
+
         // SqlClient
         internal const string ApplicationIntent = "Application Intent";
         internal const string ApplicationName = "Application Name";
